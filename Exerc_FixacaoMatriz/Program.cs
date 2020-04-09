@@ -28,7 +28,7 @@ namespace Exerc_FixacaoMatriz
 
             Console.WriteLine("Informe um número a localizar na matriz:");
             int num = int.Parse(Console.ReadLine());
-
+            int checkIf = 0;
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
@@ -53,10 +53,14 @@ namespace Exerc_FixacaoMatriz
                         {
                             Console.WriteLine("Down: " + mat[i + 1, j]);
                         }
+                        checkIf++;
                     }
                 }
             }
-            
+            if (checkIf == 0)
+            {
+                Console.WriteLine("Número informado não foi localizado na matriz.");
+            }
             Console.ReadLine();
 
         }
