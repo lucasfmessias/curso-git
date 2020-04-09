@@ -6,6 +6,8 @@ namespace Exerc_FixacaoMatriz
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Digite a dimensão da matriz N x M:");
+
             string[] s = Console.ReadLine().Split(' ');
 
             int n = int.Parse(s[0]);
@@ -14,6 +16,7 @@ namespace Exerc_FixacaoMatriz
             int[,] mat = new int[n, m];
 
             // Loading data in matrix
+            Console.WriteLine("Informe os elementos da Matriz " + n + " x " + m );
             for (int i = 0; i < n; i++)
             {
                 string[] sVetor = Console.ReadLine().Split(' ');
@@ -23,6 +26,7 @@ namespace Exerc_FixacaoMatriz
                 }
             }
 
+            Console.WriteLine("Informe um número a localizar na matriz:");
             int num = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < n; i++)
